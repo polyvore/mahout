@@ -1,0 +1,5 @@
+image: java:openjdk-8-jdk
+script:
+    - apt-get update
+    - apt-get install -y maven2
+    - mvn install -Dmaven.test.skip=true
