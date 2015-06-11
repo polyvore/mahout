@@ -1,5 +1,7 @@
 image: java:openjdk-8-jdk
 script:
+    - echo "deb http://httpredir.debian.org/debian jessie main\ndeb http://httpredir.debian.org/debian jessie-updates main" > /etc/apt/sources.list.d/maven3.list
+    - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  B70731143DD9F856
     - apt-get update
-    - apt-get install -y maven2
-    - mvn install -Dmaven.test.skip=true
+    - apt-get install -y maven3
+    - mvn3 install -Dmaven.test.skip=true
