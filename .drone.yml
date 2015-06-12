@@ -5,7 +5,6 @@ script:
     - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  B70731143DD9F856
     - apt-get update
     - apt-get install -y maven3
-    - mvn3 install
 notify:
     email:
         recipients:
@@ -18,7 +17,7 @@ publish:
         acl: private
         bucket: $$S3_DOCUMENTATION_BUCKET
         region: $$S3_DOCUMENTATION_REGION
-        source: $$MAHOUT_JAR
+        source: mahout/mr/pom.xml
         target: $$S3_DOCUMENTATION_DIR
         recursive: true
         access_key: $$AWS_KEY
