@@ -6,6 +6,7 @@ script:
     - apt-get update
     - apt-get -y install python-pip
     - apt-get install -y maven3
+    - mvn3 install
 notify:
     email:
         recipients:
@@ -16,10 +17,10 @@ notify:
 publish:
     s3:
         acl: private
-        bucket: polyvore-emr-code
-        region: us-east-1
-        source: mr/pom.xml
-        target: jars/
-        recursive: false
+        bucket: $$S3_DOCUMENTATION_BUCKET
+        region: $$S3_DOCUMENTATION_REGION
+        source: $$MAHOUT_JAR
+        target: $$S3_DOCUMENTATION_DIR
+        recursive: true
         access_key: $$AWS_KEY
         secret_key: $$AWS_SECRET
