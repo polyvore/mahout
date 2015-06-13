@@ -20,5 +20,5 @@ publish:
         source: /var/cache/drone/src/github.com/polyvore/mahout/mr/pom.xml
         target: jars
         recursive: true
-        access_key: $$AWS_KEY
-        secret_key: $$AWS_SECRET
+        access_key: {{AWS_KEY}}
+        secret_key: {{AWS_SECRET}}
