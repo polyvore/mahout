@@ -17,7 +17,7 @@ publish:
         acl: private
         bucket: $$S3_DOCUMENTATION_BUCKET
         region: $$S3_DOCUMENTATION_REGION
-        source: mr/pom.xml
+        source: /var/cache/drone/src/github.com/polyvore/mahout/mr/pom.xml
         target: $$S3_DOCUMENTATION_DIR
         recursive: true
         access_key: $$AWS_KEY
