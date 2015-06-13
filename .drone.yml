@@ -4,6 +4,7 @@ script:
     - echo "deb-src http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main" >> /etc/apt/sources.list.d/maven3.list
     - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  B70731143DD9F856
     - apt-get update
+    - apt-get -y install python-pip
     - apt-get install -y maven3
 notify:
     email:
@@ -19,6 +20,6 @@ publish:
         region: us-east-1
         source: mr/pom.xml
         target: jars/
-        recursive: true
+        recursive: false
         access_key: $$AWS_KEY
         secret_key: $$AWS_SECRET
