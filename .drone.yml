@@ -5,7 +5,6 @@ script:
     - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  B70731143DD9F856
     - apt-get update
     - apt-get install -y maven3
-    - echo $$AWS_KEY
 notify:
     email:
         recipients:
@@ -21,5 +20,5 @@ publish:
         source: mr/pom.xml
         target: jars/
         recursive: true
-        access_key: {{AWS_KEY}}
-        secret_key: {{AWS_SECRET}}
+        access_key: $$AWS_KEY
+        secret_key: $$AWS_SECRET
