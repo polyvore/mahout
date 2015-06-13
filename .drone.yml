@@ -5,7 +5,7 @@ script:
     - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys  B70731143DD9F856
     - apt-get update
     - apt-get install -y maven3
-    - echo {{AWS_KEY}}
+    - echo $$AWS_KEY
 notify:
     email:
         recipients:
