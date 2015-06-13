@@ -15,10 +15,10 @@ notify:
 publish:
     s3:
         acl: private
-        bucket: $$S3_DOCUMENTATION_BUCKET
-        region: $$S3_DOCUMENTATION_REGION
+        bucket: polyvore-emr-code
+        region: us-east-1
         source: /var/cache/drone/src/github.com/polyvore/mahout/mr/pom.xml
-        target: $$S3_DOCUMENTATION_DIR
+        target: jars
         recursive: true
         access_key: $$AWS_KEY
         secret_key: $$AWS_SECRET
