@@ -1,4 +1,4 @@
-Welcome to Apache Mahout in Polyvore  !
+Welcome to Apache Mahout in Polyvore!
 
 Getting Started
   See http://mahout.apache.org
