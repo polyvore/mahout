@@ -57,8 +57,8 @@ public abstract class ToEntityPrefsMapper extends
                   Text value,
                   Context context) throws IOException, InterruptedException {
     String[] tokens = DELIMITER.split(value.toString());
-    long userID = Long.parseLong(tokens[0]);
-    long itemID = Long.parseLong(tokens[1]);
+    long userID = Long.parseUnsignedLong(tokens[0]);
+    long itemID = Long.parseUnsignedLong(tokens[1]);
     if (itemKey ^ transpose) {
       // If using items as keys, and not transposing items and users, then users are items!
       // Or if not using items as keys (users are, as usual), but transposing items and users,
