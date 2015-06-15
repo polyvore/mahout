@@ -21,6 +21,6 @@ publish:
         region: $$S3_DOCUMENTATION_REGION
         source: $$MAHOUT_JAR
         target: $$S3_DOCUMENTATION_DIR
-        recursive: true
+        recursive: false
         access_key: $$AWS_KEY
         secret_key: $$AWS_SECRET
